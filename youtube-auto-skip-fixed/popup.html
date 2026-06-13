@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Auto Skip</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <svg class="logo__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="#cc0000"/>
+          <polygon points="9,7 19,12 9,17" fill="#ffffff"/>
+        </svg>
+        <span class="logo__name">Auto Skip</span>
+      </div>
+      <span class="version">v1.0</span>
+    </header>
+
+    <!-- Enable / Disable Toggle -->
+    <section class="card toggle-card">
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <span class="toggle-label">Auto Skip</span>
+          <span class="toggle-sub" id="status-text">Active</span>
+        </div>
+        <label class="switch" aria-label="Enable or disable auto skip">
+          <input type="checkbox" id="enable-toggle" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="card stats-card">
+      <p class="stat-label">Ads skipped</p>
+      <p class="stat-count" id="skip-count">0</p>
+      <button class="btn-reset" id="reset-btn" aria-label="Reset counter">
+        Reset counter
+      </button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Skips ads the moment they're skippable.
+    </footer>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
